@@ -1,5 +1,4 @@
-<head>
-    <?php
+<?php
 if ($_POST['ref_spoof'] != NULL) {
     $offer = urldecode($_POST['ref_spoof']);
     $p1 = strpos ($offer, '?') + 1;
@@ -18,7 +17,3 @@ if ($_POST['ref_spoof'] != NULL) {
     echo '</form><script language="JavaScript"> document.getElementById('myform').submit();</script></body></html>';
 }
 ?>
-</head>
-<body>
-Test
-</body>
