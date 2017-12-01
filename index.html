@@ -1,24 +1,4 @@
-<head>
-    <?php
-if ($_POST['ref_spoof'] != NULL) {
-    $offer = urldecode($_POST['ref_spoof']);
-    $p1 = strpos ($offer, '?') + 1;
-    $url_par = substr ($offer , $p1);
-    $paryval = explode ('&', $url_par);
-    $p = array();
-    foreach ($paryval as $value) {
-        $p[] = explode ('=',$value);
-    }
-    echo'<html><head><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"></head><body><form action="'.$offer.'" method="get" id="myform">';
-    if ($p1 != 1) {
-    foreach ($p as $value) {
-        echo '<input type="hidden" name="'.$value[0].'" value="'.$value[1].'">';
-    }
-    }
-    echo '</form><script language="JavaScript"> document.getElementById('myform').submit();</script></body></html>';
-}
-?>
-</head>
+
 <body>
 Test
 </body>
